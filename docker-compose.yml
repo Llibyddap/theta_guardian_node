@@ -1,15 +1,17 @@
+# This docker-compose version is being used for testing purposes only
+# bill.r.armstrong@gmail.com
+
 version: '2'
 services:
   theta:
     image: llibyddap/theta_guardian_node
     environment: 
-      - NODE_PASSWORD = "password_change"
+      - NODE_PASSWORD = "set_your_password_here"
     expose:
       - 30001
     ports:
       - 30001:30001
     restart: unless-stopped
 
-#  Need to automate password as secrete
 #  Need to estalish persistent volumn
 #  Need to add Prometheus & endpoints
