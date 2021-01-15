@@ -22,5 +22,5 @@ EXPOSE 30001 16888
 # 6060
 
 # run daemon
-CMD ["/root/theta_mainnet/bin/theta", "start", "--config=/root/.theta", "--password=test"] 
+CMD ["/root/theta_mainnet/bin/theta", "start", "--config=/root/.theta", "--password=$NODE_PASSWORD"] 
 #$NODE_PASSWORD"]
