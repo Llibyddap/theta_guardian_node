@@ -16,12 +16,11 @@ RUN     wget -O /root/.theta/snapshot `curl -k https://mainnet-data.thetatoken.o
 RUN     chmod +x /root/theta_mainnet/bin/theta \
         && chmod +x /root/theta_mainnet/bin/thetacli
 
-WORKDIR /root/theta_mainnet/bin
-
 # expose tcp ports
 # 30001=p2p; 16888=RPC
 EXPOSE 30001 16888
 # 6060
 
 # run daemon
-CMD ["/root/theta_mainnet/bin/theta start --config=/root/.theta --password=$NODE_PASSWORD"]
+CMD ["/root/theta_mainnet/bin/theta", "start", "--config=/root/.theta", "--password=test"] 
+#$NODE_PASSWORD"]
